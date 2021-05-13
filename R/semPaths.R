@@ -1655,6 +1655,7 @@ semPaths <- function(object,what="paths",whatLabels,style,layout="tree",intercep
                                              barsAtSide = ThreshAtSide,
                                              edge.label.cex = edge.label.cex,
                                              edgeConnectPoints = ECP,
+                                             DoNotPlot=TRUE,
                                              ...)
 
 #     if (thresholds)
@@ -1687,13 +1688,13 @@ semPaths <- function(object,what="paths",whatLabels,style,layout="tree",intercep
 #       }
 #     }
     
-    if (title)
-    {
-      #       if (length(Groups)==1) title("Path Diagram",line=3) else title(paste0("Path Diagram for group '",gr,"'"),line=3)
-      title(gr, col.main=title.color, adj = title.adj, outer = TRUE, cex.main = title.cex, line = title.line)
-    }
+#     if (title)
+#     {
+#       #       if (length(Groups)==1) title("Path Diagram",line=3) else title(paste0("Path Diagram for group '",gr,"'"),line=3)
+#       title(gr, col.main=title.color, adj = title.adj, outer = TRUE, cex.main = title.cex, line = title.line)
+#     }
   }
-  par(ask=askOrig)
+#   par(ask=askOrig)
   if (length(qgraphRes)==1) qgraphRes <- qgraphRes[[1]]
   invisible(qgraphRes)
 }
